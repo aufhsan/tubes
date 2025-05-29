@@ -517,7 +517,6 @@ func pencarianKategori() {
 	for left <= right && !found {
 		mid = (left + right) / 2
 		if searchPakaian[mid].kategori == kategori {
-			// Print semua yang cocok dari mid ke kiri
 			var idx int
 			idx = mid
 			for idx >= left && searchPakaian[idx].kategori == kategori {
@@ -527,7 +526,6 @@ func pencarianKategori() {
 					p.id, p.nama, p.kategori, p.warna)
 				idx--
 			}
-			// Print semua yang cocok dari mid+1 ke kanan
 			idx = mid + 1
 			for idx <= right && searchPakaian[idx].kategori == kategori {
 				var p pakaian
@@ -612,7 +610,7 @@ func pengurutanFormalitas() {
 	fmt.Println("\nHasil Pengurutan Pakaian (Selection Sort - Formalitas):")
 	for i = 0; i < pakaianCount; i++ {
 		var p pakaian
-		p = sortedPakaian[i] // Gunakan sortedPakaian, bukan pakaianList
+		p = sortedPakaian[i]
 		fmt.Printf("ID: %s, Nama: %s, Formalitas: %d\n", p.id, p.nama, p.formalitas)
 	}
 }
