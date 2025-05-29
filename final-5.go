@@ -370,8 +370,7 @@ func hapusOutfit() {
 			return
 		}
 	}
-
-	// Jika tidak ditemukan
+	
 	if !found {
 		fmt.Println("\nOutfit dengan ID tersebut tidak ditemukan!")
 	}
@@ -506,7 +505,6 @@ func pencarianKategori() {
 		}
 	}
 
-	//AMANNNNNN
 	fmt.Println("\nHasil Pencarian Pakaian (Binary Search):")
 	var left, right, mid int
 	left = 0
